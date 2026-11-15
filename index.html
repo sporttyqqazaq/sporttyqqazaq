@@ -1,42 +1,336 @@
 
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SPORTTYQ_QAZAQ — Қазақстан спортының жаңалықтары">
+<title>SPORTTYQ_QAZAQ — Спорт жаңалықтары</title>
 
+<style>
+:root{
+  --blue:#1261b5;
+  --deep:#073b78;
+  --pale:#eaf4ff;
+  --ink:#14243a;
+  --muted:#63748a;
+  --line:#dce8f5;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f6faff;
+  color:var(--ink);
+}
+header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:5;
+}
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:0 18px;
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 0;
+}
+.logo{
+  font-weight:900;
+  font-size:clamp(21px,4vw,30px);
+  letter-spacing:.4px;
+  color:var(--deep);
+}
+.logo span{color:var(--blue)}
+.tag{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:4px;
+}
+nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  padding:0 0 14px;
+}
+nav a{
+  color:var(--deep);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  padding:9px 13px;
+  border-radius:20px;
+  background:var(--pale);
+}
+nav a:hover{background:#d6eaff}
+.hero{
+  margin:24px auto;
+  background:linear-gradient(120deg,#073b78,#1675d1);
+  color:#fff;
+  border-radius:22px;
+  padding:34px 28px;
+}
+.hero small{
+  opacity:.8;
+  font-weight:700;
+  letter-spacing:1.5px;
+}
+.hero h1{
+  font-size:clamp(28px,5vw,44px);
+  margin:10px 0;
+}
+.hero p{
+  max-width:650px;
+  line-height:1.6;
+  margin:0;
+  color:#eaf4ff;
+}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin:28px 0 14px;
+}
+.section-head h2{
+  margin:0;
+  color:var(--deep);
+}
+.search{
+  width:min(100%,260px);
+  padding:11px 14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  font-size:14px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-bottom:32px;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 5px 18px #0b4a8210;
+}
+.visual{
+  height:190px;
+  background:linear-gradient(135deg,#dceeff,#a9d2ff);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  font-size:48px;
+}
+.visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.body{padding:17px}
+.category{
+  font-size:12px;
+  color:var(--blue);
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.card h3{
+  font-size:18px;
+  line-height:1.35;
+  margin:9px 0;
+}
+.card p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0;
+  white-space:pre-wrap;
+}
+.status{
+  color:var(--muted);
+  padding:20px;
+  grid-column:1/-1;
+}
+footer{
+  background:#073b78;
+  color:#eaf4ff;
+  padding:26px 0;
+  margin-top:30px;
+}
+footer p{
+  margin:6px 0;
+  color:#c9def5;
+  font-size:13px;
+}
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr 1fr}
+  .top{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .hero{padding:26px 20px}
+  nav a{font-size:13px}
+  .section-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .search{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="logo">SPORTTYQ_<span>QAZAQ</span></div>
+        <div class="tag">Қазақстан спортының тынысы</div>
+      </div>
+    </div>
+
+    <nav aria-label="Негізгі бөлімдер">
+      <a href="#news">Қазақстан</a>
+      <a href="#news">Футбол</a>
+      <a href="#news">Бокс</a>
+      <a href="#news">UFC / MMA</a>
+      <a href="#news">Олимпиада</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <small>СПОРТ ЖАҢАЛЫҚТАРЫ</small>
+    <h1>Жеңіс жаңалықтан басталады!</h1>
+    <p>
+      Қазақстан спортындағы маңызды оқиғалар,
+      спортшылардың жетістіктері және жарыстар
+      туралы жаңалықтар — бір алаңда.
+    </p>
+  </section>
+
+  <div class="section-head">
+    <h2>Соңғы жаңалықтар</h2>
+    <input
+      class="search"
+      id="search"
+      type="search"
+      placeholder="Жаңалық іздеу..."
+      aria-label="Жаңалық іздеу"
+    >
+  </div>
+
+  <section class="grid" id="news">
+    <p class="status">Жаңалықтар жүктелуде...</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>SPORTTYQ_QAZAQ</strong>
+    <p>Қазақстан спорты туралы қазақ тіліндегі ақпарат алаңы.</p>
+    <p>© 2026 SPORTTYQ_QAZAQ</p>
+  </div>
+</footer>
+
+<script>
 const search = document.getElementById('search');
 const news = document.getElementById('news');
 
+let allCards = [];
+
 async function loadNews() {
+  news.innerHTML = '<p class="status">Жаңалықтар жүктелуде...</p>';
+
   try {
     const response = await fetch(
-      'https://api.github.com/repos/sporttyqqazaq/sporttyqqazaq/contents/content/news'
+      'https://api.github.com/repos/sporttyqqazaq/sporttyqqazaq/contents/content/news',
+      {
+        headers: {
+          Accept: 'application/vnd.github+json'
+        },
+        cache: 'no-store'
+      }
     );
-    if (!response.ok) throw new Error('Жаңалықтар жүктелмеді');
+
+    if (!response.ok) {
+      throw new Error('GitHub жаңалықтарын жүктеу қатесі: ' + response.status);
+    }
 
     const files = await response.json();
+
+    if (!Array.isArray(files)) {
+      throw new Error('Жаңалықтар тізімі дұрыс емес');
+    }
+
+    const jsonFiles = files.filter(file =>
+      file.name && file.name.endsWith('.json')
+    );
+
     const posts = await Promise.all(
-      files
-        .filter(file => file.name.endsWith('.json'))
-        .map(async file => {
-          const result = await fetch(file.download_url);
-          return result.json();
-        })
+      jsonFiles.map(async file => {
+        const result = await fetch(file.download_url);
+
+        if (!result.ok) {
+          throw new Error('Жаңалық файлы ашылмады: ' + file.name);
+        }
+
+        return await result.json();
+      })
+    );
+
+    posts.sort((a, b) =>
+      (b.date || '').localeCompare(a.date || '')
     );
 
     news.replaceChildren();
+    allCards = [];
 
-    posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    if (posts.length === 0) {
+      news.innerHTML =
+        '<p class="status">Әзірге жаңалық жарияланған жоқ.</p>';
+      return;
+    }
 
     posts.forEach(post => {
       const card = document.createElement('article');
       card.className = 'card';
-      card.dataset.text = `${post.title} ${post.body}`;
+
+      card.dataset.text =
+        `${post.title || ''} ${post.body || ''} ${post.date || ''}`
+        .toLocaleLowerCase('kk');
 
       const visual = document.createElement('div');
       visual.className = 'visual';
 
       if (post.image) {
         const img = document.createElement('img');
-        img.src = post.image;
+
+        img.src = post.image.startsWith('/')
+          ? post.image
+          : '/' + post.image;
+
         img.alt = post.title || 'Жаңалық суреті';
-        img.style.cssText = 'width:100%;height:100%;object-fit:cover';
+        img.loading = 'lazy';
+
+        img.onerror = () => {
+          visual.textContent = '🇰🇿';
+        };
+
         visual.appendChild(img);
       } else {
         visual.textContent = '🇰🇿';
@@ -47,10 +341,19 @@ async function loadNews() {
 
       const category = document.createElement('div');
       category.className = 'category';
-      category.textContent = post.date || 'Жаңалық';
+
+      if (post.date) {
+        const date = new Date(post.date + 'T00:00:00');
+
+        category.textContent = isNaN(date.getTime())
+          ? post.date
+          : date.toLocaleDateString('kk-KZ');
+      } else {
+        category.textContent = 'Жаңалық';
+      }
 
       const title = document.createElement('h3');
-      title.textContent = post.title || '';
+      title.textContent = post.title || 'Атаусыз жаңалық';
 
       const text = document.createElement('p');
       text.textContent = post.body || '';
@@ -58,18 +361,33 @@ async function loadNews() {
       body.append(category, title, text);
       card.append(visual, body);
       news.appendChild(card);
+
+      allCards.push(card);
     });
+
+    filterNews();
+
   } catch (error) {
     console.error(error);
-    news.textContent = 'Жаңалықтарды жүктеу мүмкін болмады.';
+
+    news.innerHTML =
+      '<p class="status">Жаңалықтарды жүктеу мүмкін болмады. Кейінірек қайта көріңіз.</p>';
   }
 }
 
-search.addEventListener('input', () => {
-  const q = search.value.toLocaleLowerCase('kk');
-  document.querySelectorAll('.card').forEach(card => {
-    card.style.display = card.dataset.text.toLocaleLowerCase('kk').includes(q) ? '' : 'none';
+function filterNews() {
+  const q = search.value.toLocaleLowerCase('kk').trim();
+
+  allCards.forEach(card => {
+    card.style.display =
+      card.dataset.text.includes(q) ? '' : 'none';
   });
-});
+}
+
+search.addEventListener('input', filterNews);
 
 loadNews();
+</script>
+
+</body>
+</html>
