@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SPORTTYQ_QAZAQ — Қазақстан спортының жаңалықтары">
+<title>SPORTTYQ_QAZAQ — Спорт жаңалықтары</title>
+<style>
+:root{--blue:#1261b5;--deep:#073b78;--pale:#eaf4ff;--ink:#14243a;--muted:#63748a;--line:#dce8f5}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6faff;color:var(--ink)}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.logo{font-weight:900;font-size:clamp(21px,4vw,30px);letter-spacing:.4px;color:var(--deep)}.logo span{color:var(--blue)}
+.tag{font-size:12px;color:var(--muted);margin-top:4px}
+nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 14px}
+nav a{color:var(--deep);text-decoration:none;font-weight:700;font-size:14px;padding:9px 13px;border-radius:20px;background:var(--pale)}
+nav a:hover{background:#d6eaff}
+.hero{margin:24px auto;background:linear-gradient(120deg,#073b78,#1675d1);color:#fff;border-radius:22px;padding:34px 28px}
+.hero small{opacity:.8;font-weight:700;letter-spacing:1.5px}.hero h1{font-size:clamp(28px,5vw,44px);margin:10px 0}.hero p{max-width:650px;line-height:1.6;margin:0;color:#eaf4ff}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;color:var(--deep)}
+.search{width:min(100%,260px);padding:11px 14px;border:1px solid var(--line);border-radius:12px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #0b4a8210}
+.visual{height:132px;background:linear-gradient(135deg,#dceeff,#a9d2ff);display:grid;place-items:center;font-size:48px}
+.body{padding:17px}.category{font-size:11px;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.card h3{font-size:18px;line-height:1.35;margin:9px 0}.card p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}
+.notice{background:#fff;border:1px dashed #9bc5f0;border-radius:16px;padding:18px;color:var(--muted);line-height:1.6;margin:20px 0 34px}
+footer{background:#073b78;color:#eaf4ff;padding:26px 0;margin-top:30px}footer p{margin:6px 0;color:#c9def5;font-size:13px}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.top{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding:26px 20px}nav a{font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><div><div class="logo">SPORTTYQ_<span>QAZAQ</span></div><div class="tag">Қазақстан спортының тынысы</div></div></div>
+  <nav aria-label="Негізгі бөлімдер">
+    <a href="#kazakhstan">Қазақстан</a><a href="#football">Футбол</a><a href="#boxing">Бокс</a><a href="#mma">UFC / MMA</a><a href="#olympics">Олимпиада</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <section class="hero"><small>СПОРТ ЖАҢАЛЫҚТАРЫ</small><h1>Жеңіс жаңалықтан басталады!</h1><p>Қазақстан спортындағы маңызды оқиғалар, спортшылардың жетістіктері және жарыстар туралы жаңалықтар — бір алаңда.</p></section>
+  <div class="section-head"><h2>Соңғы жаңалықтар</h2><input class="search" id="search" type="search" placeholder="Жаңалық іздеу..." aria-label="Жаңалық іздеу"></div>
+  <section class="grid" id="news">
+    <article class="card" data-text="қазақстан спорт жаңалықтары ұлттық құрама"><div class="visual">🇰🇿</div><div class="body"><div class="category" id="kazakhstan">Қазақстан</div><h3>Қазақстан спорты: басты жаңалықтар</h3><p>Ұлттық құрамалар мен отандық спортшылар туралы маңызды ақпарат осы бөлімде жарияланады.</p></div></article>
+    <article class="card" data-text="футбол қазақстан чемпионат"><div class="visual">⚽</div><div class="body"><div class="category" id="football">Футбол</div><h3>Футбол әлеміндегі жаңалықтар</h3><p>Қазақстан чемпионаты, ұлттық құрама және халықаралық футбол додалары.</p></div></article>
+    <article class="card" data-text="бокс қазақстан жекпе-жек"><div class="visual">🥊</div><div class="body"><div class="category" id="boxing">Бокс</div><h3>Рингтегі жаңалықтар</h3><p>Қазақстандық боксшылардың кездесулері, нәтижелері мен алдағы жекпе-жектері.</p></div></article>
+    <article class="card" data-text="ufc mma аралас жекпе-жек"><div class="visual">🥋</div><div class="body"><div class="category" id="mma">UFC / MMA</div><h3>Аралас жекпе-жек әлемі</h3><p>UFC және өзге де MMA ұйымдарындағы қазақстандық спортшылар туралы.</p></div></article>
+    <article class="card" data-text="олимпиада спорт жарыс"><div class="visual">🏅</div><div class="body"><div class="category" id="olympics">Олимпиада</div><h3>Олимпиада жаңалықтары</h3><p>Олимпиадалық спорт түрлері, іріктеу кезеңдері және спортшылардың нәтижелері.</p></div></article>
+    <article class="card" data-text="спорт нәтижелер күнтізбе"><div class="visual">🏆</div><div class="body"><div class="category">Нәтижелер</div><h3>Жарыс қорытындылары</h3><p>Жарыстардың қорытындысы мен маңызды спорттық көрсеткіштер.</p></div></article>
+  </section>
+  <div class="notice"><strong>Ескерту:</strong> Бұл — сайттың алғашқы үлгісі. Қазір мұнда демонстрациялық мәтіндер тұр; нақты жаңалықтарды жариялау және басқару жүйесін кейін қосамыз.</div>
+</main>
+<footer><div class="wrap"><strong>SPORTTYQ_QAZAQ</strong><p>Қазақстан спорты туралы қазақ тіліндегі ақпарат алаңы.</p><p>Байланыс: editor@sporttyq.com</p><p>© 2026 SPORTTYQ_QAZAQ</p></div></footer>
+<script>
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{const q=search.value.toLocaleLowerCase('kk');document.querySelectorAll('.card').forEach(card=>{card.style.display=card.dataset.text.toLocaleLowerCase('kk').includes(q)||card.innerText.toLocaleLowerCase('kk').includes(q)?'':'none'})});
+</script>
+</body></html>
