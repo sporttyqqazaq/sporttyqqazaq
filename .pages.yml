@@ -1,0 +1,27 @@
+
+media:
+  input: media
+  output: /media
+
+content:
+  - name: news
+    label: Жаңалықтар
+    type: collection
+    path: content/news
+    filename: "{primary}.json"
+    format: json
+    fields:
+      - name: title
+        label: Тақырыбы
+        type: string
+        required: true
+      - name: date
+        label: Күні
+        type: date
+      - name: image
+        label: Суреті
+        type: image
+      - name: body
+        label: Мәтіні
+        type: rich-text
+        required: true
